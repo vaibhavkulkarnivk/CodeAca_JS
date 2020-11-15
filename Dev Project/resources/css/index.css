@@ -1,0 +1,24 @@
+.navBar{
+    background-color: aliceblue;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.nav-li{
+    display:inline-block;
+    padding: 30px 20px;
+}
+.banner{
+    background-color: blue;
+    text-align: center;
+    margin-top: 75px;
+}
+#small-image{
+    padding: 50px 50px;
+    height: 100px;
+    width: 100px;
+    filter: drop-shadow(5px 5px 5px black);
+}
+.bold{
+    font-weight: 1000;
+}

@@ -1,0 +1,76 @@
+
+<!-- saved from url=(0045)file:///C:/Users/Lenovo/Desktop/JSONTest.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body>
+		<script>
+			var person =  {	name:"Vaibhav",
+							age:23,
+							email : function(){
+								return 'brad@gmail.com';
+							},
+							address:{
+								"street":"West",
+								"HouseNo":35
+								},	
+							children : ["Brian","John"]
+							};
+			
+			console.log('AGE::'+person.age);
+			
+			console.log('EMAIL::'+person.email())//Function in JSON
+			
+			console.log('STREET::'+person.address.street);
+			
+			console.log('First child::'+person.children[0]);
+			
+			//Convert JAVA object to JSON
+			personJSON = JSON.stringify(person);
+			console.log(personJSON);
+			//Access JSON using . then result is undefined
+			console.log('personJSON::'+personJSON.name);
+			
+			//Convert JSON to JAVA object
+			person = JSON.parse(personJSON);
+			//able to use . notation on JAVA object
+			console.log('NAME::'+person.name);
+			
+			//Array handling JS
+			peopleArray = [
+				{
+					name : "Brad",
+					age : 34
+				},
+				{
+					name : "John",
+					age : 45
+				}
+			];
+			console.log('PEOPLE ARRAY FIRST::'+peopleArray[0].name);
+			
+			//Iteration
+			console.log('Iteration in FOR LOOP');
+			for(i=0;i<peopleArray.length;i++){
+				console.log(peopleArray[i].name);
+			}
+			
+			//Array function map, reduce, filter
+			console.log('Array access using Arrow function::');
+			peopleArray.forEach(people => console.log('Name--'+people.name));
+			
+			//Array of Array travelling for wrapper
+			peopleArrayArray = [
+				{
+					name : "Brad",
+					age : 34,
+					children:["Charles","Lara"]
+				},
+				{
+					name : "John",
+					age : 45,
+					children:["Charles","Lara"]
+				}
+			];
+			console.log('Array of Array access using Arrow function::');
+			peopleArrayArray.forEach((people) => { people.children.forEach((child) => console.log('Children ::'+child))});
+		</script>
+	
+</body></html>

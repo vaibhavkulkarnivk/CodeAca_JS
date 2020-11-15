@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <h1> Sending HTTP request to PHP and get response </h1> <br/>
+        <h1> Call dom.php </h1>
+        <p id="serverRes"></p>
+    </body>
+    <script>
+        const xhr = new XMLHttpRequest();
+        //Parse response
+        xhr.onload = function(){
+            const serverRes = document.getElementById("serverRes");
+            serverRes.innerHTML = this.responseText;
+        };
+        xhr.open("POST","dom.php");
+        xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+        xhr.send("name=Vaibhav&message=Goining good now?");
+    </script>
+</html>

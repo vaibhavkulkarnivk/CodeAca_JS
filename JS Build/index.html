@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <h1> Adding Element using JS </h1> <br/>
+        <ul id="ulElem"></ul>
+    </body>
+    <script>
+        function createListItem(text){
+            var li = document.createElement(li);
+            li.textContent = text;
+            return li;
+        }
+        function appendChildren(parent,children){
+            children.forEach(function(child){
+                parent.appendChild(child);
+            });
+        }
+        var ulObj  = document.getElementById("ulElem");
+        var arr = [
+            createListItem('First'),
+            createListItem('Second'),
+            createListItem('Third')
+        ];
+        appendChildren(ulObj,arr);
+    </script>
+</html>
